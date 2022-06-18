@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Curso Automatizacion semillero ias - screenplay</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="9a535347541f36d9e486248b6369ef2a9c43c2f480465fbcf6be4a776f07c2ba.html">Login En Aplicativo OrangeHRM</a></span>
+                > <span class="truncate-60"><a
+                    href="f19201deb905102dda4fd64aba5deb5c15b40f90decfc6f087834833573b48c8.html">Login exitoso OrangeHRM </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 18-06-2022 11:58</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Login En Aplicativo OrangeHRM </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                como usuario deseo realizar el login en la plataforma OrangeHRM
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon fa-2x' title='FAILURE'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="failing-color">Login exitoso OrangeHRM
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Assertion error: Expected: (true) but: was (false)</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.AssertionError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.semilleroias.stepsdefinition.CrearUsuariosStepsDefinition.validoQueElEmpleadoSeHaCreadoDeFormaCorrecta(CrearUsuariosStepsDefinition.java:20)<br />✽.valido que el empleado se ha creado de forma correcta(file:///C:/Users/Admin/Documents/Semillero%20automatizacion/automatizacion-screenplay/src/test/resources/features/crearUsuario.feature:11)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                <div class="panel-body">
+                    <a href="#" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="d87aa2a1f43efe711b6a76fd4a91f8ec57141dd2dedea706f307671abdd13d8d.png" title=" Given que &quot;Ana&quot; se encuentra en OrangeHRM" width="1920"/>
+                <img src="d87aa2a1f43efe711b6a76fd4a91f8ec57141dd2dedea706f307671abdd13d8d.png" title=" Ana abrir pagina" width="1920"/>
+                <img src="d87aa2a1f43efe711b6a76fd4a91f8ec57141dd2dedea706f307671abdd13d8d.png" title=" Ana opens the Login orange hrm page" width="1920"/>
+                <img src="d87aa2a1f43efe711b6a76fd4a91f8ec57141dd2dedea706f307671abdd13d8d.png" title=" Ana abrir pagina (completed)" width="1920"/>
+                <img src="d87aa2a1f43efe711b6a76fd4a91f8ec57141dd2dedea706f307671abdd13d8d.png" title=" Given que &quot;Ana&quot; se encuentra en OrangeHRM (completed)" width="1920"/>
+                <img src="b4e52581801565d660e1b3f0c8dc8ee51f0595f44ad257fbc8f29ebc29e3b83b.png" title=" When agrega las credenciales usuario &quot;Admin&quot; con clave &quot;admin123&quot;" width="1920"/>
+                <img src="b4e52581801565d660e1b3f0c8dc8ee51f0595f44ad257fbc8f29ebc29e3b83b.png" title=" Ana ingresar en logueo" width="1920"/>
+                <img src="b4e52581801565d660e1b3f0c8dc8ee51f0595f44ad257fbc8f29ebc29e3b83b.png" title=" Ana enters 'Admin' into txt usuario" width="1920"/>
+                <img src="b4e52581801565d660e1b3f0c8dc8ee51f0595f44ad257fbc8f29ebc29e3b83b.png" title=" Ana enters 'admin123' into txt clave" width="1920"/>
+                <img src="cacd0d4f1118cbed17c4d4b0be4347574451dfd4693374fdbdedc4aead78aff5.png" title=" Ana enters 'admin123' into txt clave (completed)" width="1920"/>
+                <img src="cacd0d4f1118cbed17c4d4b0be4347574451dfd4693374fdbdedc4aead78aff5.png" title=" Ana clicks on btn logueo" width="1920"/>
+                <img src="afd79dcb0166615dac7eb6a3053d41675a5d438214bb86b294c80af1adff5d43.png" title=" Ana clicks on btn logueo (completed)" width="1920"/>
+                <img src="afd79dcb0166615dac7eb6a3053d41675a5d438214bb86b294c80af1adff5d43.png" title=" Ana ingresar en logueo (completed)" width="1920"/>
+                <img src="afd79dcb0166615dac7eb6a3053d41675a5d438214bb86b294c80af1adff5d43.png" title=" When agrega las credenciales usuario &quot;Admin&quot; con clave &quot;admin123&quot; (completed)" width="1920"/>
+                <img src="9d156f3f708d821642a18ce4d8263fa4f3c8c97fcba95a3f7f70cc09ce1aa562.png" title=" When agrega los datos de empleado
+| firstName | lastName | middleName | photograph | nameLogin | passLogin |
+| Emilio | Gonzales |  | img.png | emilio | emilio123 |" width="1920"/>
+                <img src="9d156f3f708d821642a18ce4d8263fa4f3c8c97fcba95a3f7f70cc09ce1aa562.png" title=" Ana crear empleado" width="1920"/>
+                <img src="9d156f3f708d821642a18ce4d8263fa4f3c8c97fcba95a3f7f70cc09ce1aa562.png" title=" Ana clicks on menu PIM" width="1920"/>
+                <img src="aab723a3824945794f601130e3a62b3547536b23f2ca2fc604d29209767d38f8.png" title=" Ana clicks on first Name" width="1920"/>
+                <img src="698e1599c88364e163c7042c091237e5413f43c7998abf21e17644ee66abb712.png" title=" Ana clicks on first Name (completed)" width="1920"/>
+                <img src="698e1599c88364e163c7042c091237e5413f43c7998abf21e17644ee66abb712.png" title=" Ana enters 'Emilio' into first Name" width="1920"/>
+                <img src="127e401e9959b0ff574d7f2411f96165361b594a6b4ec4f969e8adb303c9e9d3.png" title=" Ana enters 'Emilio' into first Name (completed)" width="1920"/>
+                <img src="127e401e9959b0ff574d7f2411f96165361b594a6b4ec4f969e8adb303c9e9d3.png" title=" Ana enters '' into middle Name" width="1920"/>
+                <img src="eafcf8279d1ab84d887122a0ef1fc09f8b378046a66bcf12cbe28761687eacb5.png" title=" Ana enters '' into middle Name (completed)" width="1920"/>
+                <img src="eafcf8279d1ab84d887122a0ef1fc09f8b378046a66bcf12cbe28761687eacb5.png" title=" Ana enters 'Gonzales' into last Name" width="1920"/>
+                <img src="d1c0a977132af06c5b50341181176a14edabf98f965b6360c9b37d96f0e6c91b.png" title=" Ana enters 'Gonzales' into last Name (completed)" width="1920"/>
+                <img src="d1c0a977132af06c5b50341181176a14edabf98f965b6360c9b37d96f0e6c91b.png" title=" Upload file at .\src\test\resources\testImages\img.png to add photograph" width="1920"/>
+                <img src="93fb6b5798bb1259c4ed8c08faf0e8b11ff559e0739bb20b42b0641b38ca6d79.png" title=" Upload file at .\src\test\resources\testImages\img.png to add photograph (completed)" width="1920"/>
+                <img src="93fb6b5798bb1259c4ed8c08faf0e8b11ff559e0739bb20b42b0641b38ca6d79.png" title=" Ana clicks on chk login details" width="1920"/>
+                <img src="9637cf96ab4b8f8066fecbbe207f474fe5fb6d65d1a081dab74300cb1c41628a.png" title=" Ana clicks on chk login details (completed)" width="1920"/>
+                <img src="9637cf96ab4b8f8066fecbbe207f474fe5fb6d65d1a081dab74300cb1c41628a.png" title=" Ana enters 'emilio' into username login" width="1920"/>
+                <img src="564227cae9e297d624009305cb609e68003c7ebc8fcc420c836e96627b99e1ff.png" title=" Ana enters 'emilio' into username login (completed)" width="1920"/>
+                <img src="564227cae9e297d624009305cb609e68003c7ebc8fcc420c836e96627b99e1ff.png" title=" Ana enters 'emilio123' into password login" width="1920"/>
+                <img src="b56274398a8ce6bac0fe35645cb31b74eced9c041b121f056cd80eb7718c68c8.png" title=" Ana enters 'emilio123' into password login (completed)" width="1920"/>
+                <img src="b56274398a8ce6bac0fe35645cb31b74eced9c041b121f056cd80eb7718c68c8.png" title=" Ana enters 'emilio123' into re password login" width="1920"/>
+                <img src="3c08eb02fb0443c3ca73b5e64961be244454199c1d2d2aa3ba160b7a188abab5.png" title=" Ana enters 'emilio123' into re password login (completed)" width="1920"/>
+                <img src="3c08eb02fb0443c3ca73b5e64961be244454199c1d2d2aa3ba160b7a188abab5.png" title=" Ana clicks on btn save" width="1920"/>
+                <img src="285dd43373300e4c4743cd74b6eb7d639afff9e6d1d18a906fc5502b0dd24b85.png" title=" Ana clicks on btn save (completed)" width="1920"/>
+                <img src="285dd43373300e4c4743cd74b6eb7d639afff9e6d1d18a906fc5502b0dd24b85.png" title=" Ana clicks on btn save" width="1920"/>
+                <img src="a41c5231a8ec3e6aa520ab92b6ba30e9bcddb60881cacc775adadc999daa86ca.png" title=" Ana clicks on btn save (completed)" width="1920"/>
+                <img src="a41c5231a8ec3e6aa520ab92b6ba30e9bcddb60881cacc775adadc999daa86ca.png" title=" Ana crear empleado (completed)" width="1920"/>
+                <img src="a41c5231a8ec3e6aa520ab92b6ba30e9bcddb60881cacc775adadc999daa86ca.png" title=" When agrega los datos de empleado
+| firstName | lastName | middleName | photograph | nameLogin | passLogin |
+| Emilio | Gonzales |  | img.png | emilio | emilio123 | (completed)" width="1920"/>
+                <img src="a41c5231a8ec3e6aa520ab92b6ba30e9bcddb60881cacc775adadc999daa86ca.png" title=" Then valido que el empleado se ha creado de forma correcta" width="1920"/>
+                <img src="a41c5231a8ec3e6aa520ab92b6ba30e9bcddb60881cacc775adadc999daa86ca.png" title=" Then usuario creado should be (true): <span class='failing-color'>FAILURE</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.2.5</span>
+</div>
+</body>
+</html>

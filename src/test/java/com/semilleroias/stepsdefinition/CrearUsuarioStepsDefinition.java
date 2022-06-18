@@ -19,16 +19,11 @@ public class CrearUsuarioStepsDefinition {
     @Steps
     CrearUsuarioSteps crearUsuarioSteps;
 
-    @When("ingreso a AddEmployee en OrangeHRM'")
-    public void ingresoAAddEmployeeEnOrangeHRM() {
-
-    }
-
     @When("agrega los datos de empleado")
 
     public void agregaLosDatosDeEmpleado(DataTable dataTable) {
         homeOrangeHrmSteps.ingresoAddEmployee();
-        crearUsuarioSteps.ingresoAddEmployee(dataTable);
+        crearUsuarioSteps.ingresarEmployee(dataTable);
     }
 
 
